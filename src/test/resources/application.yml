@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: test
+
+const:
+  show-limit-number: 100

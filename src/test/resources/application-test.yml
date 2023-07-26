@@ -1,0 +1,21 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    generate-ddl: true
+    open-in-view: false
+    properties:
+      database-platform: org.hibernate.dialect.H2Dialect
+      hibernate:
+        default_batch_fetch_size: 100
+  config:
+    activate:
+      on-profile: test
+  flyway:
+    enabled: false
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;MODE=MySQL;IGNORECASE=TRUE;DB_CLOSE_ON_EXIT=FALSE;INIT=create schema if not exists securities\;SET SCHEMA securities
+    username: sa
+    password:

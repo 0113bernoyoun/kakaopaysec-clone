@@ -1,0 +1,9 @@
+CREATE TABLE stock (
+id BIGINT NOT NULL AUTO_INCREMENT,
+name VARCHAR(255),
+price DECIMAL(19,2),
+ts INT,
+code VARCHAR(255),
+PRIMARY KEY (id),
+UNIQUE KEY stockUnique (ts, code)
+);
